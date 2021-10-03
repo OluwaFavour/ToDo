@@ -10,8 +10,8 @@ using ToDo.Data;
 namespace ToDo.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211002123317_AddTasksDbContext")]
-    partial class AddTasksDbContext
+    [Migration("20211003190629_AddTasksToDbContext")]
+    partial class AddTasksToDbContext
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -231,8 +231,8 @@ namespace ToDo.Data.Migrations
                     b.Property<int>("Color")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("DateCreated")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("DateCreated")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Details")
                         .HasColumnType("nvarchar(max)");

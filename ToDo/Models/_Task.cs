@@ -20,11 +20,11 @@ namespace ToDo.Models
         public string Details { get; set; }
         public string Title { get; set; }
         public Color Color { get; set; }
-        public DateTime DateCreated { get; set; }
+        public string DateCreated { get; set; }
 
         public _Task()
         {
-            this.DateCreated = DateTime.Now.Date;
+            DateCreated = DateTime.UtcNow.ToString("MMM d, yyyy - h:mm tt");
         }
     }
 }
