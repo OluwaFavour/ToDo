@@ -1,0 +1,50 @@
+﻿@model ToDo.Models._Task
+@{
+    ViewData["Title"] = "Add Task";
+}
+
+<form asp-action="Add" method="post">
+    <div class="jumbotron col-8">
+
+        <div class="form-group">
+            <h2 class="text-info">Add Task</h2>
+        </div>
+
+        <div class="pt-2">
+            <div class="form-group">
+                <div>
+                    <label asp-for="Title"></label>
+                </div>
+
+                <div>
+                    <input asp-for="Title" class="form-control" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div>
+                    <label asp-for="Details"></label>
+                </div>
+
+                <div>
+                    <textarea asp-for="Details" class="form-control" rows="4"></textarea>
+                </div>
+            </div>
+
+            @*<div class="form-group">
+                <div>
+                    <label asp-for="Color"></label>
+                </div>
+
+                <div>
+                    <input type="radio" asp-for="Color" value="Red" />
+                </div>
+            </div>*@
+
+            <div>
+                <a class="btn btn-outline-danger" asp-action="Index">Cancel</a>
+                <input class="btn btn-outline-primary float-right" type="submit" value="Add">
+            </div>
+        </div>
+    </div>
+</form>
