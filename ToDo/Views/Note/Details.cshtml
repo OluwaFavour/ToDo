@@ -1,0 +1,22 @@
+﻿@model ToDo.Models.Note
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="jumbotron">
+    <h3 class="display-4">@Model.Title</h3>
+    <p class="small text-secondary">@Model.DateCreated</p>
+    <hr />
+
+    <article>
+        @Model.Details
+    </article>
+
+    <footer class="float-left">
+        <a class="btn btn-secondary" asp-action="Index">Back</a>
+        <div class="float-right">
+            @Html.ActionLink("Edit", "Edit", "Note", new { id = Model.ID }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Delete", "Delete", "Note", new { id = Model.ID }, new { @class = "btn btn-danger rounded-sm" })
+            </div>
+    </footer>
+</div>

@@ -14,6 +14,6 @@ namespace ToDo.Data
         {
         }
 
-        public DbSet<_Task> Tasks { get; set; }
+        public DbSet<Note> Notes { get; set; }
     }
 }
